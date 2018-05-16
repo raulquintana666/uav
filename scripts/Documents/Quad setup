@@ -1,0 +1,22 @@
+1.
+	first upload arduino code (just in case):
+
+	sometimes the accelerometer only works when you upload the example code prior to the actual 		driver code:
+
+	"TEST_ADXL345.ino"
+
+	now the real code can be uploaded
+
+	"quad_v1.ino"
+
+2.	now run a ROS master in terminal
+
+	$ roscore
+
+	now run the quad driver node in a new terminal
+
+	$ rosrun rosserial_python serial_node.py /dev/ttyACM0
+
+3.	If you want to listen to the data being published
+
+	$ rostopic echo gro_x

@@ -1,0 +1,34 @@
+WHEN FIRST STARTING ROS
+
+When starting ROS, run this cmmand on every new shell opeend to have access to ROS commands
+
+$ source /opt/ros/kinetic/setup.bash
+
+
+Before continuing source your new setup.*sh file: 
+
+$ source ./devel/setup.bash
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Now, launch the roscore in a new terminal window:
+
+$ roscore
+
+Next, run the rosserial client application that forwards your Arduino messages to the rest of ROS. Make sure to use the correct serial port:
+
+$ rosrun rosserial_python serial_node.py /dev/ttyACM0
+
+Finally, you can toggle the LED using rostopic:
+
+$ rostopic pub toggle_led std_msgs/Empty --once
+
+
+////////////////////////////////////////////////////////////////////////////////
+USEFUL COMMANDS
+
+listen to the gyro_x topic
+
+$ rostopic echo gro_x
+
+

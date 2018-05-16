@@ -1,0 +1,24 @@
+Make sure that a roscore is up and running:
+
+$ roscore
+
+catkin specific If you are using catkin, make sure you have sourced your workspace's setup.sh file after calling catkin_make but before trying to use your applications:
+
+# In your catkin workspace
+$ cd ~/catkin_ws
+$ source ./devel/setup.bash
+
+In the last tutorial we made a publisher called "talker". Let's run it:
+
+$ rosrun beginner_tutorials talker.py   (Python) 
+
+or in my case
+
+$ rosrun quad motorX_publisher.py
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+To make a file exexutable use this
+
+$ chmod +x quad_controller.py
