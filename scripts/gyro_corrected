@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+# this code publishes calibrated gyro data
+
+
+import rospy
+from std_msgs.msg import Int16
+
+def gyro_corrected():
+	pub = rospy.Publisher('gyro_x_cal',String, queue_size=10)
+	rospy.init
