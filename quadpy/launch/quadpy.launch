@@ -1,0 +1,21 @@
+<launch>
+  <node 
+    pkg="quadpy"
+    type="gyro_cal_pubx.py"
+    name="gyro_x_cal_node"
+    ns="blue_bot"
+  />
+  <node 
+    pkg="quadpy"
+    type="gyro_cal_puby.py"
+    name="gyro_y_cal_node"
+    ns="blue_bot"
+  />
+  <node 
+    pkg="quadpy"
+    type="gyro_cal_pubz.py"
+    name="gyro_z_cal_node"
+    ns="blue_bot"
+  />
+  
+</launch>
